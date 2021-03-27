@@ -29,25 +29,6 @@ namespace WPF_App_With_Car.ViewModels
             listbrands = GetBrands();
             listcars = GetCars();
         }
-        /*public MainWindowViewModel()
-        {
-            RefreshData();
-        }
-        private async void RefreshData()
-        {
-            await Task.Run(() => this.Refresh(ref AllViews.mainwindow));
-        }
-        private void Refresh(ref MainWindow Viewmain)
-        {
-            while (true)
-            {
-                Thread.Sleep(2000);
-                MessageBox.Show("обнова");
-                Viewmain.DataGridTask.ItemsSource = GetBrands();
-                Viewmain.DataGridTask2.ItemsSource = GetCars();
-            }
-        }*/
-
         public ToWorkCarWindowCommand To_Work_Car_Click
         {
             get
