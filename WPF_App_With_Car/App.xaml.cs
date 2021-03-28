@@ -19,6 +19,9 @@ namespace WPF_App_With_Car
         protected override void OnStartup(StartupEventArgs e)
         {
             base.OnStartup(e);
+            var currentDomain = AppDomain.CurrentDomain;
+            var basePath = currentDomain.BaseDirectory.Remove(57);
+            currentDomain.SetData("DataDirectory", basePath);
             ViewModelService.Register<MainWindowViewModel>();
             ViewService.Register<MainWindow>();
             ViewService.Resolve<MainWindow>(ViewModelService.Resolve<MainWindowViewModel>()).Show();
