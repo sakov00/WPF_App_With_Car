@@ -20,7 +20,7 @@ namespace WPF_App_With_Car
         {
             base.OnStartup(e);
             var currentDomain = AppDomain.CurrentDomain;
-            var basePath = currentDomain.BaseDirectory.Remove(57);
+            var basePath = currentDomain.BaseDirectory.Substring(0,currentDomain.BaseDirectory.Length-11);
             currentDomain.SetData("DataDirectory", basePath);
             ViewModelService.Register<MainWindowViewModel>();
             ViewService.Register<MainWindow>();
